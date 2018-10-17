@@ -6,5 +6,6 @@ document.getElementById("input_add").onclick = function(evt) {
     alert(id);
 
     let peb = new PrettyExceptionBuilder(JSON.parse(rawex));
+    peb.Print(document.getElementById("workspace"));
     evt.preventDefault();
 };
