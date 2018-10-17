@@ -50,7 +50,7 @@ export class AssemblyInfo implements IAssemblyInfo
     private getValueFromKeyValueString(kvstring: string) :string
     {
         let split = kvstring.trim().split("=");
-        return kvstring[1].trim();
+        return split[1].trim();
     }
 }
 
@@ -67,7 +67,7 @@ export class FileInfo implements IFileInfo
         {
             let split = fileName.split('\\');
             this.FileName = fileName;
-            this.PrettyFileName = split[split.length];
+            this.PrettyFileName = split[split.length - 1];
             this.findPrettyFilePath(); 
             this.Assembly = new AssemblyInfo(assembly);
         }
@@ -94,7 +94,7 @@ export class MethodInfo implements IMethodInfo
         {
             this.Name = name;
             let split = name.split('.');
-            this.PrettyName = name[name.length - 1];
+            this.PrettyName = split[split.length - 1];
         }
         catch (ex)
         {

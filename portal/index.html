@@ -5,42 +5,80 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./css/photon.min.css">
-
-    <!-- Javascript -->
-    <script src="js/menu.js" charset="utf-8"></script>
+    <style type="text/css">
+      .exception-block {
+          background: #c0c0c00f;
+          padding: 0px 10px 20px 20px;
+          margin: 5px;
+          border: 1px solid #00000024;
+      }
+      .exception-stack-block {
+          margin-left: 10px;
+          border-left: 3px solid #eeeeee;
+          padding-left: 5px;
+          margin-top: 1px;
+      }
+      .skip-exception-block {
+        display: inline-block;
+        width: 53px;
+        height: 7px;
+        background: #d6d6d661;
+        margin: 0px 0px 0px -13px;
+        content: '...';
+        border: 1px solid #d7d5d7;
+        border-radius: 20px;
+    }
+    </style>
   </head>
   <body>
     <div class="window">
 
       <!-- .toolbar-header sits at the top of your app -->
       <header class="toolbar toolbar-header">
-        <h1 class="title">PrettyExceptions</h1>
+        <!-- <h1 class="title">PrettyExceptions</h1> -->
+        <div class="toolbar-actions">
+          <button class="btn btn-default" id="input_reset">
+            <span class="icon icon-arrows-ccw"></span>&nbsp;
+            Reset Workspace
+          </button>
+          <input type="checkbox"> Show Relevent Data Only
+        </div>
       </header>
 
       <!-- Your app's content goes inside .window-content -->
       <div class="window-content">
         <div class="pane-group">
           <div class="pane-md sidebar">
-            <form class="padded-less">
+            <form class="padded-less" onsubmit="return false;">
               <div class="form-group">
                 <label>Issue ID</label>
-                <input type="text" class="form-control" placeholder="Issue ID" id="input_id">
+                <input type="text" class="form-control" placeholder="Issue ID" id="input_id" value="ex01">
               </div>
               <div class="form-group">
                 <label>Raw Exception</label>
                 <textarea class="form-control" rows="3" id="input_re" style="height: 500px"></textarea>
               </div>
               <div class="form-actions">
-                <button type="submit" class="btn btn-form btn-default">Cancel</button>
-                <button type="submit" class="btn btn-form btn-primary">Add</button>
+                <button type="submit" class="btn btn-form btn-default" id="input_cancel">Cancel</button>
+                <button type="submit" class="btn btn-form btn-primary" id="input_add">Add</button>
+                
               </div>
             </form>
           </div>
           <div class="pane">
-            <div class="padded-more">Add A Stack Trace to visualize it here!</div>
+            <div class="padded-more" id="workspace">
+              Add A Stack Trace to visualize it here!
+            </div>
           </div>
+          <div class="pane">
+              <div class="padded-more">Insights</div>
+            </div>
         </div>
       </div>
     </div>
   </body>
+  <!-- Javascript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js" charset="utf-8"></script>
+  <script src="js/PrettyExceptionClient.js" charset="utf-8"></script>
+  <script src="js/menu.js" charset="utf-8"></script>
 </html>

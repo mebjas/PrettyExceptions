@@ -18,9 +18,8 @@ export class ExceptionType implements IExceptionType
         {
             this.FullName = type;
             let split = type.split('.');
-            this.Name = split[split.length - 1];
-            split.pop();
-            this.Name = split.join('.');
+            this.Name = split.pop();
+            this.Namespace = split.join('.');
         }
         catch (ex)
         {

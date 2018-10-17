@@ -1,12 +1,14 @@
 {
     "compileOnSave": true,
     "compilerOptions": {
-      "module":"amd",
+      "module":"commonjs",
+      "esModuleInterop": true,
+      "resolveJsonModule": true,
       "target": "es5",
       "sourceMap": true,
-      "outFile": "dist/prettyexceptionbuilder.js"
+      "outFile": "../portal/js/PrettyExceptionClient.js"
     },
     "files":[
-      "./PrettyExceptionBuilder.ts"
+      "./PrettyExceptionClient.ts"
     ]
 }
