@@ -7,6 +7,6 @@
       "outFile": "dist/prettyexceptionbuilder.js"
     },
     "files":[
-      "./PrettyExceptionBuilder.ts",
+      "./PrettyExceptionBuilder.ts"
     ]
-  }
+}
