@@ -1,0 +1,12 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+      "module":"amd",
+      "target": "es5",
+      "sourceMap": true,
+      "outFile": "dist/prettyexceptionbuilder.js"
+    },
+    "files":[
+      "./PrettyExceptionBuilder.ts",
+    ]
+  }
