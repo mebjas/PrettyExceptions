@@ -138,8 +138,8 @@ var PrettyExceptionBuilder = /** @class */ (function () {
                 try {
                     var innerBlock = "<div class='exception-stack-block'>"
                     if (stack.File.Assembly ) {
-                        innerBlock += "<b>" + stack.File.Assembly.Name +"</b> /";
-                        innerBlock += stack.File.PrettyFileName + " / ";
+                        innerBlock += "<b class='annotation-allowed'>" + stack.File.Assembly.Name +"</b> /";
+                        innerBlock += "<span class='annotation-allowed'>" +stack.File.PrettyFileName + "</span> / ";
                         lastSkipped = false;
                     } else {
                         if (!lastSkipped) {
@@ -150,7 +150,7 @@ var PrettyExceptionBuilder = /** @class */ (function () {
                         return;
                     }
 
-                    innerBlock += stack.Method.PrettyName
+                    innerBlock += "<span class='annotation-allowed'>" +stack.Method.PrettyName +"</span>"
                     + " / " + stack.Line.LineOfCode
                     + "</div>";
                     block += innerBlock;
