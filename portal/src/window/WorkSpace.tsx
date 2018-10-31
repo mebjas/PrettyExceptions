@@ -1,4 +1,4 @@
-// src/window/WorkSpace.tsx
+// src/Window/WorkSpace.tsx
 
 import * as React from 'react';
 import { IRawException } from '../Core/Contracts'

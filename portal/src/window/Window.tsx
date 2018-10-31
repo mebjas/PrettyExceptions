@@ -1,4 +1,4 @@
-// src/window/Window.tsx
+// src/Window/Window.tsx
 
 import * as React from 'react';
 import { IInsightsState, Insights} from './Insights'

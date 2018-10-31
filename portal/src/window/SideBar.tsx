@@ -1,4 +1,4 @@
-// src/window/SideBar.tsx
+// src/Window/SideBar.tsx
 
 import * as React from 'react';
 

@@ -1,4 +1,4 @@
-// src/window/ToolBar.tsx
+// src/Window/ToolBar.tsx
 
 import * as React from 'react';
 

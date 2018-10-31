@@ -1,4 +1,4 @@
-// src/window/Insights.tsx
+// src/Window/Insights.tsx
 
 import * as React from 'react';
 
