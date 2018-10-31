@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './App.css';
-import Window from './Window/Window'
+import Window from './Dashboard/Window'
 
 class App extends React.Component {
   public render() {

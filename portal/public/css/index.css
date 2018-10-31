@@ -37,3 +37,8 @@
 .error-message {
   color: red;
 }
+
+.clickable:hover {
+  cursor: pointer;
+  color: red;
+}
