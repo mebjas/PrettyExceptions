@@ -41,10 +41,15 @@ export class SideBar extends React.Component<ISideBarProperty, ISideBarState>
     public render() {
         return (
             <div className="pane-md sidebar">
+                <header className="toolbar toolbar-header">
+                   <h1 className="title">Add Exception Stack Trace</h1>
+                </header>
                 <SideBarAddBox 
                     id={this.state.id}
                     exceptionString={this.state.exceptionString}
                     onSideBarAddBoxAddEvent={this.OnSideBarAddBoxAddEvent} />
+
+                <footer className="toolbar toolbar-footer" />
                 <SideBarList
                     exceptions={this.state.exceptions}
                     onChange={this.OnSideBarListItemSelectionChange}
