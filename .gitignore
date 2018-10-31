@@ -330,3 +330,7 @@ ASALocalRun/
 .mfractor/
 core/dist/*
 dataset/*.csv
+portal/node_moudules
+portal/npm-debug.log
+portalV3/node_moudules
+portalV3/npm-debug.log
